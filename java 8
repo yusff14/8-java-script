@@ -1,0 +1,146 @@
+"Menghitung Biaya Parkir"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>biyaya parkir</title>
+  </head>
+  <body>
+    <br />
+    <br />
+    <br />
+    <label for="jamParkir">Jam Parkir</label>
+    <input id="jamParkir" type="number" />
+
+    <button onclick="hitungJamParkir()">Cetak</button>
+
+    <label for="biayaParkir">Biaya Parkir</label>
+    <input id="biayaParkir" type="number" />
+
+    <script>
+      function hitungJamParkir() {
+        const jamParkir = document.getElementById('jamParkir');
+        const biayaParkir = document.getElementById('biayaParkir');
+
+        if (jamParkir.value == 2) {
+          biayaParkir.value = 3000;
+        } else if (jamParkir.value > 2) {
+          biayaParkir.value = jamParkir.value * 1000 + 1000;
+        }
+      }
+    </script>
+  </body>
+</html>
+
+Menghitung Dolar Kerupiah
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menghitung dolar ke rupiah</title>
+  </head>
+  <body>
+    <label for="dollar">Dollar</label>
+    <input id="dollar" type="number" />
+
+    <button onclick="hitungKursDollar()">Hitung</button>
+
+    <label for="rupiah">Rupiah</label>
+    <input id="rupiah" type="number" />
+
+    <script>
+      function hitungKursDollar() {
+        const dollar = document.getElementById('dollar');
+        const rupiah = document.getElementById('rupiah');
+
+        rupiah.value = dollar.value * 14650;
+      }
+    </script>
+  </body>
+</html>
+
+
+kalkulator sedarhana
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hasil = bil1 + bil2;
+      function hitungPenjumlahan() {
+        const bil1 = document.getElementById('bil1');
+        const bil2 = document.getElementById('bil2');
+        const hasil = document.getElementById('hasil');
+
+        hasil.value = Number(bil1.value) + Number(bil2.value);
+      }
+    </script>
+    <input type="text" id="bil1" value="0" onchange="hitungPenjumlahan()" />
+    <b>+</b>
+    <input type="text" id="bil2" value="0" onchange="hitungPenjumlahan()" />
+    <b>=</b>
+    <input type="text" id="hasil" onchange="hitungPenjumlahan()" />
+  </body>
+</html>
+
+Menghitung luas keliling
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menghitung keliling dan luas lingkaran</title>
+  </head>
+  <body>
+    <!-- ini menghitung menggunakan console -->
+    <!-- // console.log(titel);
+    // console.log('keliling lingkaran dengan jari-jari ' + jari2 + ' = ' + keliling);
+    // console.log('dan luasnya' + ' = ' + luas); -->
+
+    <!-- menghitung menggunakan fungsi if, else if dan else -->
+    <script>
+      let luas = 3.14 * jari2 * jari2;
+      let keliling = 2 * 3.14 * jari2;
+      let nama = 'program java Script';
+      let nama1 = ' Nurul fikri';
+      let titel = nama + nama1;
+      function hitungKeliling() {
+        const jari2 = document.getElementById('jari2');
+        const keliling = document.getElementById('keliling');
+        const luas = document.getElementById('luas');
+
+        if (jari2.value == 1) {
+          keliling.value = 2 * 3.14 * jari2.value;
+        } else if (jari2.value > 1) {
+          keliling.value = 2 * 3.14 * jari2.value;
+        } else jari2.value > 1;
+        luas.value = 3.14 * jari2.value * jari2.value;
+      }
+    </script>
+    <h1>Kalkulator menghitung keliling dan luas lingkaran</h1>
+    <br />
+    <h4 for="jari2">jari-jari</h4>
+    <input type="text" id="jari2" />
+    <br />
+    <button onclick="hitungKeliling()">cetak</button>
+    <br />
+    <h4 for="keliling">keliling</h4>
+    <input type="text" id="keliling" />
+    <br />
+    <h4 for="luas">luas</h4>
+    <input type="text" id="luas" />
+  </body>
+</html>
+
